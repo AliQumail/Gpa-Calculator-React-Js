@@ -1,0 +1,25 @@
+.input-div{
+    height:40px;
+    border-radius:3%;
+    width:30%;
+    text-align: center;
+    margin-left:3px;
+    margin-right:3px;
+}
+.select-css{
+    height:38px;
+    width:50px;
+}
+.points-css{
+    color:black;
+    padding:2px;
+    background-color: white;
+    height:35px;
+    width: 40px;
+    margin:0px 5px;
+    
+}
+.points-text{
+    position:relative;
+    top:4px;
+}

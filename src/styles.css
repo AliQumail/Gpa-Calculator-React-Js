@@ -1,0 +1,15 @@
+.gpaBtn {
+  width: 10rem;
+  max-width: 200px;
+  border-radius: 0%;
+  margin-left: 20px;
+  margin: 10px;
+}
+.a {
+  color: white;
+  font-weight: bold;
+}
+.main {
+  text-align: center;
+  padding-top: 100px;
+}
