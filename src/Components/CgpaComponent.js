@@ -1,6 +1,7 @@
 import React from 'react';
 import './CgpaComponent.css'
 
+
 function CgpaComponent(props){
     return <>
     
@@ -20,6 +21,7 @@ function CgpaComponent(props){
         value={props.totalCredits}
         onChange={ (event) => props.handleTotalCredits(event,props.index)}
       />
+      
       <br/>
      </>
 }

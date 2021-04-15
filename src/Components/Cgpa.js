@@ -9,16 +9,16 @@ function Cgpa(){
    const [cgpa,setCgpa] = useState(0);
 
    const [semester,setSemester] = useState(['semester No']);
-   const [totalCredits,setTotalCredits]= useState(['']);
-   const [totalSgpa,setTotalSgpa] = useState(['']);
+   const [totalCredits,setTotalCredits]= useState([1]);
+   const [totalSgpa,setTotalSgpa] = useState([0]);
 
    function handleAddSemester(){
        
        setSemester( (prevValues)=>{
          return [...prevValues,' '];
         })
-       setTotalSgpa((prevValues) => [...prevValues,'']);
-       setTotalCredits((prevValues) => [...prevValues,''])
+       setTotalSgpa((prevValues) => [...prevValues,0]);
+       setTotalCredits((prevValues) => [...prevValues,0])
    }
    function handleSgpa(event,i){
     
@@ -61,6 +61,12 @@ function Cgpa(){
     return <Container>
       <Row className='align-items-center justify-content-center'>
        <div className='cgpa'> Cgpa : {cgpa}</div>
+      </Row>
+      <Row className='heading-row'>
+        <Col className='headings'>Semester</Col>
+        <Col className='headings'>Sgpa</Col>
+        <Col className='headings'>Total Credits</Col>
+
       </Row>
       <Row className='align-items-center justify-content-center' >
     { semester.map((semester,i)=>{
