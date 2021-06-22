@@ -18,7 +18,8 @@ export default function App() {
 
   return (  <Container className="main">
         <Row className="align-items-center justify-content-center">
-         
+        <h4 className="links">Connect with me on <a href="https://www.linkedin.com/in/ali-qumail-4b77601a8/">Linkedin</a></h4>
+     
      
             <Button className="gpaBtn" variant="primary" onClick={handleSgpa}>
               Sgpa
@@ -30,8 +31,7 @@ export default function App() {
         </Row>
           { render === 0 ? <Sgpa/> : <Cgpa/> }
 
-        <h4 className="links">Connect with me on <a href="https://www.linkedin.com/in/ali-qumail-4b77601a8/">Linkedin</a></h4>
-      </Container>
+         </Container>
   
   );
 }
