@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Container, Button, Row } from "react-bootstrap";
 import Sgpa from "./Components/Sgpa";
 import Cgpa from "./Components/Cgpa";
@@ -7,33 +7,31 @@ import "./styles.css";
 
 export default function App() {
   document.body.style = "background: #292b2c;";
-  return (
-    <Router>
-      <Container className="main">
+  const [render,setRender] = useState(0);
+  function handleCgpa(){
+    setRender(1);
+  }
+  function handleSgpa(){
+    setRender(0);
+  }
+  console.log(render)
+
+  return (  <Container className="main">
         <Row className="align-items-center justify-content-center">
-          <Link className="a" to="/sgpa">
-            {" "}
-            <Button className="gpaBtn" variant="primary">
+         
+     
+            <Button className="gpaBtn" variant="primary" onClick={handleSgpa}>
               Sgpa
             </Button>
-          </Link>
-          <Link className="a" to="/cgpa">
-            {" "}
-            <Button className="gpaBtn" variant="danger">
+            <Button className="gpaBtn" variant="danger" onClick={handleCgpa}>
               Cgpa
             </Button>
-          </Link>
+       
         </Row>
+          { render === 0 ? <Sgpa/> : <Cgpa/> }
 
-        <Switch>
-          <Route path="/sgpa">
-            <Sgpa />
-          </Route>
-          <Route path="/cgpa">
-            <Cgpa />
-          </Route>
-        </Switch>
+        <h4 className="links">Connect with me on <a href="https://www.linkedin.com/in/ali-qumail-4b77601a8/">Linkedin</a></h4>
       </Container>
-    </Router>
+  
   );
 }

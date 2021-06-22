@@ -13,3 +13,10 @@
   text-align: center;
   padding-top: 100px;
 }
+.links{
+  color:white;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+}
