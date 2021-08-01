@@ -16,9 +16,10 @@ export default function App() {
   }
   console.log(render)
 
-  return (  <Container className="main">
+  return ( <Container className="main">
+     <h6 className="social-div">Connect with me on <a href="https://www.linkedin.com/in/ali-qumail-4b77601a8/">Linkedin</a></h6>
         <Row className="align-items-center justify-content-center">
-        <h4 className="links">Connect with me on <a href="https://www.linkedin.com/in/ali-qumail-4b77601a8/">Linkedin</a></h4>
+        
      
      
             <Button className="gpaBtn" variant="primary" onClick={handleSgpa}>
@@ -32,6 +33,6 @@ export default function App() {
           { render === 0 ? <Sgpa/> : <Cgpa/> }
 
          </Container>
-  
+
   );
 }
